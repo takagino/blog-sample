@@ -1,3 +1,7 @@
+<aside class="side-search">
+  <?php get_search_form(); ?>
+</aside>
+
 <aside class="side-category">
   <h2 class="side-title">category</h2>
   <ul class="side-list">
@@ -9,6 +13,7 @@
     ?>
   </ul>
 </aside>
+
 <aside class="side-archive">
   <h2 class="side-title">archive</h2>
   <ul class="side-list">
@@ -20,6 +25,7 @@
     ?>
   </ul>
 </aside>
+
 <aside class="side-about">
   <h2 class="side-title">about</h2>
   <p class="about-name">Yamada Trou</p>

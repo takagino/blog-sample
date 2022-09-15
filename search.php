@@ -2,7 +2,7 @@
     <main>
       <div class="contents">
         <div class="post-all">
-          <p>これは、<?php single_cat_title(); ?>の一覧です。</p>
+          <p>「<?php echo get_search_query(); ?>」の検索結果です。</p>
 
           <?php
           if(have_posts()):

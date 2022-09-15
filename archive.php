@@ -11,7 +11,19 @@
           ?>
 
           <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+
+            <?php
+            if( has_post_thumbnail() ):
+              the_post_thumbnail('thumbnail');
+            else:
+            ?>
+
             <img src="<?php echo get_theme_file_uri('/images/pic_post01.jpg'); ?>" alt="">
+
+            <?php
+            endif;
+            ?>
+
             <h2 class="post-title"><?php the_title(); ?></h2>
             <p class="post-date"><?php the_time('Y.n.j.'); ?></p>
             <div class="post-contents">
@@ -42,11 +54,11 @@
             </ul>
           </div>
 
-          <div class="nav-page">
+          <div class="nav-page blog">
             <?php
             the_posts_pagination(
               array(
-                'mid_size' => 5,
+                'mid_size' => 3,
                 'next_text' => '>',
                 'type' => 'list'
               )

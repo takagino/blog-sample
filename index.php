@@ -57,7 +57,7 @@
             <?php
             the_posts_pagination(
               array(
-                'mid_size' => 5,
+                'mid_size' => 3,
                 'next_text' => '>',
                 'type' => 'list'
               )

@@ -23,6 +23,8 @@
             </div>
           </article>
 
+          <?php comments_template(); ?>
+
           <?php
           endwhile;
           endif;
@@ -36,6 +38,7 @@
             </ul>
           </div>
 
+          <!-- サブループのサンプル -->
           <?php
           $args = array(
             'orderby' => 'rand',
