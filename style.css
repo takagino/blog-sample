@@ -1,0 +1,280 @@
+/*
+Theme Name: blog-sample
+Theme URI:
+Author: Tarou Yamada
+Author URI:
+Description: WordPressを学んで、最初のテーマです。
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@charset "utf-8";
+
+/*Common
+-------------------------------------*/
+body {
+  color: #333;
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+a:hover {
+  color: #f36;
+  text-decoration: underline;
+}
+
+.inner {
+  width: 92%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 60px;
+}
+
+.nav-global ul {
+  display: flex;
+}
+
+.nav-global li {
+  margin-left: 30px;
+}
+
+/* contents */
+.contents {
+  margin-bottom: 100px;
+}
+
+/* post */
+.post-all {
+  margin-bottom: 60px;
+}
+
+.post {
+  margin-top: 100px;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post-title {
+  margin-top: 10px;
+}
+
+.post-date {
+  margin-bottom: 30px;
+  color: #666;
+  font-style: italic;
+}
+
+.post-info {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #bbb;
+}
+
+.post-btn {
+  display: block;
+  width: 150px;
+  margin: 30px 0 0 auto;
+  padding: 5px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #666;
+  border-radius: 25px;
+}
+
+.post-btn:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.nav-page {
+  margin-top: 50px;
+}
+
+.nav-page ul {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-page a {
+  display: block;
+  margin: 0 5px;
+  padding: 3px 10px;
+  transition: all .2s;
+}
+
+.nav-page a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #f36;
+}
+
+/* sidebar */
+.sidebar aside {
+  margin-bottom: 40px;
+}
+
+.side-title {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.side-list li {
+  margin-bottom: 10px;
+}
+
+.about-name::after {
+  content: "－";
+  display: block;
+}
+
+/* footer */
+footer {
+  padding: 30px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+}
+
+.nav-sns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.nav-sns li {
+  margin-left: 30px;
+}
+
+.nav-sns a {
+  color: #fff;
+}
+
+/*About
+-------------------------------------*/
+.about {
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+
+.profile {
+  margin-bottom: 50px;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+
+.profile-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-title span {
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.profile-item {
+  margin-bottom: 10px;
+}
+
+.profile-item dt {
+  font-weight: bold;
+}
+
+.skill-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skill-all {
+  padding: 30px 30px 20px;
+  background-color: #ddd;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.skill-item dt {
+  margin-right: 20px;
+}
+
+.skill-item dd {
+  font-size: 16px;
+}
+
+/*Contact
+-------------------------------------*/
+.contact {
+  margin: 0 0 100px;
+}
+
+/*MediaQuery
+-------------------------------------*/
+@media (min-width:800px) {
+  .contents {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .post-all {
+    width: 64%;
+    margin-bottom: 0;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+
+  .skill-all {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 30px 20px;
+    background-color: #ddd;
+  }
+
+  .skill-item {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+}
