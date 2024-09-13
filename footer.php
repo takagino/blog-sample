@@ -9,6 +9,7 @@
     <p><small>Copyright sample-blog All Rights Reserved.</small></p>
   </div>
 </footer>
+<?php wp_footer(); ?>
 </body>
 
 </html>
