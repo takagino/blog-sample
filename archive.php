@@ -2,6 +2,17 @@
 <main>
   <div class="contents">
     <div class="post-all">
+      <p>
+        <?php if (is_category()) : ?>
+          カテゴリー「<?php single_cat_title(); ?>」に属する記事一覧
+        <?php elseif (is_tag()) : ?>
+          タグ「<?php single_tag_title(); ?>」が設定された記事一覧
+        <?php elseif (is_date()) : ?>
+          「<?php echo get_the_date('Y年n月'); ?>」に投稿された記事一覧
+        <?php else: ?>
+          「<?php the_archive_title(); ?>」に関する記事一覧
+        <?php endif; ?>
+      </p>
 
       <?php
       if (have_posts()):
@@ -10,15 +21,7 @@
       ?>
 
           <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-            <?php
-            if (has_post_thumbnail()):
-              the_post_thumbnail('thumbnail');
-            else:
-            ?>
-              <img src="<?php echo get_theme_file_uri('/images/pic_post01.jpg'); ?>" alt="">
-            <?php
-            endif;
-            ?>
+            <img src="<?php echo get_theme_file_uri('/images/pic_post01.jpg'); ?>" alt="">
             <h2 class="post-title"><?php the_title(); ?></h2>
             <p class="post-date"><?php the_time('Y年n月j日'); ?></p>
             <div class="post-contents">
