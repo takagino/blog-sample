@@ -36,18 +36,13 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 function my_style_output()
 {
   wp_enqueue_style('reset', 'https://unpkg.com/modern-css-reset/dist/reset.min.css');
-
-  if (is_single()) {
-    wp_enqueue_style('my-style', get_theme_file_uri('/css/single.css'));
-  } else {
-    wp_enqueue_style('my-style', get_stylesheet_uri());
-  }
+  wp_enqueue_style('my-style', get_stylesheet_uri(), array('reset'), '1.0.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'my_style_output');
 
 //jsを追加
 function my_script_output()
 {
-  wp_enqueue_script('my-script', get_theme_file_uri('/script.js'), array('jquery'), '1.0.0', false);
+  wp_enqueue_script('my-script', get_theme_file_uri('/script.js'), array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'my_script_output');
